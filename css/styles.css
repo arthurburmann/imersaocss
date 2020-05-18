@@ -10,8 +10,6 @@ body {
     font-size: 12px;
 }
 
-
-/* se a tela tiver pelo menos 400px esses estilos serão carregados*/
 @media (min-width: 400px) {
     body {
         font-size: 16px;
@@ -205,13 +203,13 @@ a {
     transition: transform 450ms;
 }
 
-.img-portfolio:hover {
+/* .img-portfolio:hover {
     transform: scale(1.05);
 }
 
 .img-portfolio:active {
     transform: scale(1.05);
-}
+} */
 
 @media (min-width: 760px) {
     .img-portfolio {
@@ -234,6 +232,38 @@ a {
     .portfolio .grid {
         gap: 3em;
     }
+}
+
+.flip-card {
+    perspective: 550px;
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 850ms;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.flip-card:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-back {
+    height: 95%;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    transform: rotateY(180deg);
 }
 
 .contato .icons {
