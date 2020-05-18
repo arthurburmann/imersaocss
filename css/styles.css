@@ -119,18 +119,69 @@ a {
     line-height: 1.8em;
 }
 
-.contato,
-.portfolio {
+.sobre,
+.portfolio,
+.contato {
+    height: 100vh;
     padding: 2em;
-    min-height: 100vh;
 }
 
-.contato h2,
-.portfolio h2 {
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.sobre h2,
+.portfolio h2,
+.contato h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 500;
     margin-bottom: 1.5em;
     font-size: 2em;
+}
+
+.sobre .avatar {
+    margin-bottom: 50px;
+}
+
+.sobre .avatar img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+}
+
+@media (min-width: 1000px) {
+    .sobre .avatar {
+        margin-right: 2em;
+        float: left;
+    }
+    .sobre .avatar img {
+        width: 300px;
+        height: auto;
+    }
+}
+
+.sobre p {
+    margin-bottom: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    font-size: 0.85em;
+}
+
+.sobre a {
+    color: darkslategray;
+    text-decoration: none;
+}
+
+.sobre a:hover {
+    text-decoration: underline;
 }
 
 .portfolio figure {
@@ -138,6 +189,7 @@ a {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     text-transform: lowercase;
+    font-size: 0em;
 }
 
 .portfolio .grid {
@@ -157,7 +209,9 @@ a {
     transform: scale(1.05);
 }
 
-
+.img-portfolio:active {
+    transform: scale(1.05);
+}
 
 @media (min-width: 760px) {
     .img-portfolio {
